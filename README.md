@@ -34,9 +34,8 @@ ImmortalWrt 是基于 [OpenWrt](https://openwrt.org) 的高端强化分支，专
 - 磁盘空间：≥ 25 GB  
 - 网络：可正常访问互联网
 
-### 🔧 必备工具（以 Debian/Ubuntu 为例）
-
-**方法一：通过 APT 安装依赖**  <br/>
+  - 🔧 必备工具（以 Debian/Ubuntu 为例）<br/>
+    - 方法一：通过 APT 安装依赖：
       <details>
         <summary>通过 APT 安装依赖</summary>
 
@@ -53,12 +52,11 @@ ImmortalWrt 是基于 [OpenWrt](https://openwrt.org) 的高端强化分支，专
           upx-ucl unzip vim wget xmlto xxd zlib1g-dev zstd
         ```
       </details>
-
-**方法二：一键初始化环境**  
+    - 方法二：一键初始化环境：
       ```bash
       sudo bash -c 'bash &lt;(curl -s https://build-scripts.immortalwrt.org/init_build_environment.sh )'
       ```
-
+      
 ### ⚠ 编译注意事项
 
 - 全程使用普通用户操作，禁止 root 或 sudo  
