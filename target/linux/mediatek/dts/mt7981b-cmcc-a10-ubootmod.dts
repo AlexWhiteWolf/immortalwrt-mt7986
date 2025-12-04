@@ -8,21 +8,15 @@
 	compatible = "cmcc,a10-ubootmod", "mediatek,mt7981";
 };
 
-&chosen {
-	bootargs = "root=/dev/fit0 rootwait";
-	rootdisk = <&ubi_rootdisk>;
-};
-
 &partitions {
 	partition@580000 {
-		compatible = "linux,ubi";
 		label = "ubi";
-		reg = <0x580000 0x7a80000>;
-
-		volumes {
-			ubi_rootdisk: ubi-volume-fit {
-				volname = "fit";
-			};
-		};
+		reg = <0x580000 0x7000000>;
 	};
+};
+
+&spi_nand {
+	mediatek,nmbm;
+	mediatek,bmt-max-ratio = <1>;
+	mediatek,bmt-max-reserved-blocks = <64>;
 };
