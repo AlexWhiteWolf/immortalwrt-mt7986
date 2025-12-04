@@ -36,7 +36,7 @@ ImmortalWrt 是基于 [OpenWrt](https://openwrt.org) 的高端强化分支，专
 
 ### 🔧 必备工具（以 Debian/Ubuntu 为例）
 
-**方法一：通过 APT 安装依赖**  
+**方法一：通过 APT 安装依赖**  <br/>
       <details>
         <summary>通过 APT 安装依赖</summary>
 
