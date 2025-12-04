@@ -512,22 +512,13 @@ TARGET_DEVICES += cetron_ct3003
 define Device/cetron_ct3003-ubootmod
   DEVICE_VENDOR := Cetron
   DEVICE_MODEL := CT3003
-  DEVICE_VARIANT := (custom U-Boot layout)
+  DEVICE_VARIANT := (OpenWrt U-Boot layout)
   DEVICE_DTS := mt7981b-cetron-ct3003-ubootmod
   DEVICE_DTS_DIR := ../dts
   DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware
-  UBINIZE_OPTS := -E 5
   BLOCKSIZE := 128k
   PAGESIZE := 2048
-  IMAGE_SIZE := 113152k
-  KERNEL_IN_UBI := 1
-  IMAGES += factory.bin
-  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
-  KERNEL = kernel-bin | lzma | \
-	fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb
-  KERNEL_INITRAMFS = kernel-bin | lzma | \
-	fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb with-initrd
 endef
 TARGET_DEVICES += cetron_ct3003-ubootmod
 
@@ -563,28 +554,20 @@ TARGET_DEVICES += cmcc_a10-stock
 define Device/cmcc_a10-ubootmod
   DEVICE_VENDOR := CMCC
   DEVICE_MODEL := A10
-  DEVICE_VARIANT := (custom U-Boot layout)
+  DEVICE_VARIANT := (OpenWrt U-Boot layout)
   DEVICE_ALT0_VENDOR := SuperElectron
   DEVICE_ALT0_MODEL := ZN-M5
-  DEVICE_ALT0_VARIANT := (custom U-Boot layout)
+  DEVICE_ALT0_VARIANT := (OpenWrt U-Boot layout)
   DEVICE_ALT1_VENDOR := SuperElectron
   DEVICE_ALT1_MODEL := ZN-M8
-  DEVICE_ALT1_VARIANT := (custom U-Boot layout)
+  DEVICE_ALT1_VARIANT := (OpenWrt U-Boot layout)
   DEVICE_DTS := mt7981b-cmcc-a10-ubootmod
   DEVICE_DTS_DIR := ../dts
+  SUPPORTED_DEVICES += cmcc,a10
   DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware
-  UBINIZE_OPTS := -E 5
   BLOCKSIZE := 128k
   PAGESIZE := 2048
-  IMAGE_SIZE := 114688k
-  KERNEL_IN_UBI := 1
-  IMAGES += factory.bin
-  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
-  KERNEL = kernel-bin | lzma | \
-	fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb
-  KERNEL_INITRAMFS = kernel-bin | lzma | \
-	fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb with-initrd
 endef
 TARGET_DEVICES += cmcc_a10-ubootmod
 
@@ -1596,6 +1579,18 @@ define Device/netcore_n60-pro
   DEVICE_PACKAGES := kmod-mt7915e kmod-mt7986-firmware mt7986-wo-firmware kmod-usb3 automount
 endef
 TARGET_DEVICES += netcore_n60-pro
+
+define Device/netcore_n60-pro-512rom
+  DEVICE_VENDOR := Netcore
+  DEVICE_MODEL := N60 Pro 512ROM
+  DEVICE_DTS := mt7986a-netcore-n60-pro-512rom
+  DEVICE_DTS_DIR := ../dts
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7986-firmware mt7986-wo-firmware kmod-usb3 automount
+endef
+TARGET_DEVICES += netcore_n60-pro-512rom
 
 define Device/netgear_wax220
   DEVICE_VENDOR := NETGEAR
