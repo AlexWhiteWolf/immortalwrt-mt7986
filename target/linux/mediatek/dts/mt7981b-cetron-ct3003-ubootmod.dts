@@ -14,3 +14,9 @@
 		reg = <0x580000 0x6e80000>;
 	};
 };
+
+&spi_nand {
+	mediatek,nmbm;
+	mediatek,bmt-max-ratio = <1>;
+	mediatek,bmt-max-reserved-blocks = <64>;
+};
