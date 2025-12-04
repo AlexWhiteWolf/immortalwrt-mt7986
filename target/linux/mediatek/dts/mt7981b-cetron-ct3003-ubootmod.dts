@@ -15,14 +15,13 @@
 
 &partitions {
 	partition@580000 {
-		compatible = "linux,ubi";
 		label = "ubi";
 		reg = <0x580000 0x7a80000>;
-
-		volumes {
-			ubi_rootdisk: ubi-volume-fit {
-				volname = "fit";
-			};
-		};
 	};
+};
+
+&spi_nand {
+	mediatek,nmbm;
+	mediatek,bmt-max-ratio = <1>;
+	mediatek,bmt-max-reserved-blocks = <64>;
 };
