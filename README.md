@@ -1,14 +1,18 @@
-# 🌌 ImmortalWrt-mt798x — Fork 自 padavanonly 的 immortalwrt-mt798x-6.6 源码
+# 🌌 适用于 MTK 系列设备的 OpenWrt 源码仓库
 
-ImmortalWrt 是基于 [OpenWrt](https://openwrt.org) 的高端强化分支，专为追求性能极限、稳定体验和全面功能的用户而打造。  
-它集成了更多软件包、支持更广泛设备，并提供预设优化配置，同时针对中国大陆用户进行了深度本地化修改。本项目是基于[padavanonly/immortalwrt-mt798x-6.6](https://github.com/padavanonly/immortalwrt-mt798x-6.6)修改版本。
+## 📖 说明
 
-在开源精神的基础上，我们引入上游无法采纳的优化技巧与增强功能，确保每台设备都能发挥最佳性能、获得更丰富的功能和更可靠的支持。  
+该项目旨在为 Mediatek Filogic 系列设备提供功能完善的 OpenWrt 系统。
 
-🔹 **默认登录信息**：  
-- 🌐 地址：`http://10.0.0.1` 或 `http://zerowrt.lan`  
-- 👤 用户名：`root`  
-- 🔑 密码：`password`  
+### 🎯 MTK 系列设备支持概览
+
+| 设备型号  | HNAT 硬件加速 | 2.4G WiFi | 5G WiFi |
+| :------: | :-----------: | :-------: | :------: |
+| MT7981   | ✅            | ✅        | ✅       |
+| MT7986   | ✅            | ✅        | ✅       |
+| MT7988   | ❌            | ❌        | ❌       |
+
+---
 
 ## 💾 下载 ImmortalWrt 固件
 
@@ -18,18 +22,26 @@ ImmortalWrt 是基于 [OpenWrt](https://openwrt.org) 的高端强化分支，专
 
 🔹 如果您的设备在支持列表中，请点击 **信息** 链接查看详细安装指南，或参考下方支持资源获取更多帮助。
 
+---
 
 ## 🛠 开发与编译
 
-要自行编译 ImmortalWrt 固件，您需要 GNU/Linux、BSD 或 macOS 系统（文件系统必须区分大小写）。Cygwin 不支持，因为其文件系统不区分大小写。
+### 使用 Github Action 云编译
 
-### 💡 编译要求
+您可以使用以下项目进行云端编译：
 
-- 推荐系统：Debian 11 / Ubuntu 20 / Ubuntu 22  
-- CPU 架构：AMD64  
-- 内存：≥ 4 GB  
-- 磁盘空间：≥ 25 GB  
-- 网络：可正常访问互联网
+- [**OPPEN321/OpenWrt**](https://github.com/OPPEN321/OpenWrt)
+
+
+### 本地编译
+
+> #### **⚠️ 注意事项**
+> - **请勿使用 `root` 用户进行编译！**
+> - **国内用户编译前建议开启网络代理。**
+> - **编译环境要求：至少 4GB 内存和 25GB 可用磁盘空间。**
+> - **默认配置：**
+>   - 登陆 IP: `10.0.0.1`
+>   - 密码: `password`
 
   - 🔧 必备工具（以 Debian/Ubuntu 为例）<br/>
     - 方法一：通过 APT 安装依赖：
