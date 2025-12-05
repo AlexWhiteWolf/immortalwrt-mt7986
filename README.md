@@ -4,6 +4,10 @@
 
 该项目旨在为 Mediatek Filogic 系列设备提供功能完善的 OpenWrt 系统。
 
+本项目 Fork 自 [padavanonly](https://github.com/padavanonly/immortalwrt-mt798x-6.6),在此基础上扩展了对更多设备的支持，并对设备树（DTS）进行了优化，以兼容旧版 U-Boot。
+
+在此，向所有贡献者表示衷心的感谢！
+
 ### 🎯 MTK 系列设备支持概览
 
 | 设备型号  | HNAT 硬件加速 | 2.4G WiFi | 5G WiFi |
@@ -14,13 +18,12 @@
 
 ---
 
-## 💾 下载 ImmortalWrt 固件
+### 📚 官方文档
 
-想要体验 ImmortalWrt 的极速与稳定？请下载官方开源无线驱动固件：
-
-- 🌐 [ImmortalWrt 固件选择器](https://firmware-selector.immortalwrt.org/)
-
-🔹 如果您的设备在支持列表中，请点击 **信息** 链接查看详细安装指南，或参考下方支持资源获取更多帮助。
+- 🚀 [快速入门指南](https://openwrt.org/docs/guide-quick-start/start) —— 新手快速上手  
+- 📖 [用户手册](https://openwrt.org/docs/guide-user/start) —— 全面操作指南  
+- 💻 [开发者文档](https://openwrt.org/docs/guide-developer/start) —— 固件与软件包开发参考  
+- 🛠 [技术参考](https://openwrt.org/docs/techref/start) —— 底层技术细节与系统架构
 
 ---
 
@@ -131,32 +134,3 @@ make V=s -j1
 make V=s -j$(nproc)
 ```
 ✅ 成功后即可快速多线程编译，提高效率。
-
-
-### 📦 相关仓库
-
-ImmortalWrt 的主仓库通过多个子仓库管理不同类别的软件包，所有软件包均可通过 OpenWrt 的包管理器 **opkg** 安装。  
-如果您想开发 Web 界面或为 ImmortalWrt 移植软件包，请参考以下官方仓库：
-
-- 🌐 [LuCI Web 界面](https://github.com/immortalwrt/luci) —— 现代化模块化浏览器控制界面  
-- 📦 [ImmortalWrt 软件包](https://github.com/immortalwrt/packages) —— 社区移植的功能扩展仓库  
-- 🔗 [OpenWrt 路由](https://github.com/openwrt/routing) —— 专注网状路由相关的软件包  
-- 🎥 [OpenWrt 视频](https://github.com/openrt/video) —— 专注显示服务器及客户端（Xorg 与 Wayland）  
-
-
-## 🛡 支持信息
-
-想要查看您的设备是否受支持？请访问 [OpenWrt 硬件数据库](https://openwrt.org/supported_devices)。
-
-### 📚 官方文档
-
-- 🚀 [快速入门指南](https://openwrt.org/docs/guide-quick-start/start) —— 新手快速上手  
-- 📖 [用户手册](https://openwrt.org/docs/guide-user/start) —— 全面操作指南  
-- 💻 [开发者文档](https://openwrt.org/docs/guide-developer/start) —— 固件与软件包开发参考  
-- 🛠 [技术参考](https://openwrt.org/docs/techref/start) —— 底层技术细节与系统架构  
-
-
-## 📝 许可证
-
-**ImmortalWrt** 基于开源协议 [GPL-2.0-only](https://spdx.org/licenses/GPL-2.0-only.html) 发布，遵循自由软件精神，您可以自由使用、修改和分发。
-
