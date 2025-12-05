@@ -1,17 +1,14 @@
-# 🌌 ImmortalWrt — 极致强化 OpenWrt 分支
+# 🌌 ImmortalWrt-mt798x — Fork 自 padavanonly 的 immortalwrt-mt798x-6.6 源码
 
 ImmortalWrt 是基于 [OpenWrt](https://openwrt.org) 的高端强化分支，专为追求性能极限、稳定体验和全面功能的用户而打造。  
-它集成了更多软件包、支持更广泛设备，并提供预设优化配置，同时针对中国大陆用户进行了深度本地化修改。  
+它集成了更多软件包、支持更广泛设备，并提供预设优化配置，同时针对中国大陆用户进行了深度本地化修改。本项目是基于[padavanonly/immortalwrt-mt798x-6.6](https://github.com/padavanonly/immortalwrt-mt798x-6.6)修改版本。
 
 在开源精神的基础上，我们引入上游无法采纳的优化技巧与增强功能，确保每台设备都能发挥最佳性能、获得更丰富的功能和更可靠的支持。  
 
 🔹 **默认登录信息**：  
-- 🌐 地址：`http://10.0.0.1` 或 `http://immortalwrt.lan`  
+- 🌐 地址：`http://10.0.0.1` 或 `http://zerowrt.lan`  
 - 👤 用户名：`root`  
-- 🔑 密码：无  
-
-体验 ImmortalWrt，即刻解锁路由器潜能，让每一次网络连接都如光速般流畅，享受极致高速与稳定。
-
+- 🔑 密码：`password`  
 
 ## 💾 下载 ImmortalWrt 固件
 
