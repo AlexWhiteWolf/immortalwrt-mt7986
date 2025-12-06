@@ -71,12 +71,11 @@ platform_do_upgrade() {
 	tplink,tl-xdr4288|\
     tplink,tl-xdr6086|\
     tplink,tl-xdr6088|\
-	cetron,ct3003-ubootmod|\
-	cmcc,a10-ubootmod|\
 	xiaomi,redmi-router-ax6000-ubootmod|\
 	xiaomi,mi-router-ax3000t-ubootmod|\
     xiaomi,mi-router-wr30u-ubootmod|\
-	
+	cetron,ct3003-ubootmod|\
+	cmcc,a10-ubootmod|\
 	h3c,magic-nx30-pro|\
 	jcg,q30-pro|\
         qihoo,360t7)
