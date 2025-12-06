@@ -78,7 +78,7 @@ platform_do_upgrade() {
 	cmcc,a10-ubootmod|\
 	h3c,magic-nx30-pro|\
 	jcg,q30-pro|\
-        qihoo,360t7)
+    qihoo,360t7)
 		CI_UBIPART="ubi"
     		CI_KERNPART="kernel"
       		CI_ROOTPART="rootfs"
