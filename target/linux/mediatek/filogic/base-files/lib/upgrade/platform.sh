@@ -67,13 +67,16 @@ platform_do_upgrade() {
 
 	case "$board" in
 	netcore,n60-pro|\
-        netcore,n60-pro-512rom|\
+    netcore,n60-pro-512rom|\
 	tplink,tl-xdr4288|\
-        tplink,tl-xdr6086|\
-        tplink,tl-xdr6088|\
+    tplink,tl-xdr6086|\
+    tplink,tl-xdr6088|\
+	cetron,ct3003-ubootmod|\
+	cmcc,a10-ubootmod|\
 	xiaomi,redmi-router-ax6000-ubootmod|\
 	xiaomi,mi-router-ax3000t-ubootmod|\
-        xiaomi,mi-router-wr30u-ubootmod|\
+    xiaomi,mi-router-wr30u-ubootmod|\
+	
 	h3c,magic-nx30-pro|\
 	jcg,q30-pro|\
         qihoo,360t7)
@@ -87,8 +90,6 @@ platform_do_upgrade() {
 	bananapi,bpi-r3-mini|\
 	bananapi,bpi-r4|\
 	bananapi,bpi-r4-poe|\
-	cetron,ct3003-ubootmod|\
-	cmcc,a10-ubootmod|\
 	cmcc,rax3000m|\
 	cmcc,rax3000me|\
 	cudy,tr3000-v1-ubootmod|\
