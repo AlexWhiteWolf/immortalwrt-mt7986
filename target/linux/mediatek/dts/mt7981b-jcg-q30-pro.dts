@@ -21,7 +21,6 @@
 	};
 
 	chosen {
-
 		stdout-path = "serial0:115200n8";
 	};
 
@@ -108,7 +107,7 @@
 		spi-tx-bus-width = <4>;
 		spi-rx-bus-width = <4>;
 		
-                mediatek,nmbm;
+		mediatek,nmbm;
                 mediatek,bmt-max-ratio = <1>;
                 mediatek,bmt-max-reserved-blocks = <64>;
 
