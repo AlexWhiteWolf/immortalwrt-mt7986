@@ -33,7 +33,7 @@
 
 您可以使用以下项目进行云端编译：
 
-- [**OPPEN321/OpenWrt**](https://github.com/OPPEN321/OpenWrt)
+- [**OPPEN321/immortalwrt-mt798x-action**](https://github.com/OPPEN321/immortalwrt-mt798x-action)
 
 
 ### 本地编译
