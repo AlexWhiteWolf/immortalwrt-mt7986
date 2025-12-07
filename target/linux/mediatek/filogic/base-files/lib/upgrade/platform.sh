@@ -78,6 +78,7 @@ platform_do_upgrade() {
 	cmcc,a10-ubootmod|\
 	h3c,magic-nx30-pro|\
 	jcg,q30-pro|\
+    newland,nl-wr8103|\
     qihoo,360t7)
 		CI_UBIPART="ubi"
     		CI_KERNPART="kernel"
