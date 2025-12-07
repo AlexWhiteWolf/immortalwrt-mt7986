@@ -737,7 +737,6 @@ setup_model()
 	xiaomi,redmi-router-ax6000* |\
 	bananapi,bpi-r3-mini* |\
 	netcore,n60* |\
-    clx,s20p|\
 	glinet,gl-mt6000|\
 	jdcloud,re-cp-03 |\
 	tplink,tl-xdr608* |\
@@ -756,7 +755,6 @@ setup_model()
 	abt,asr3000* |\
 	*clt,r30b1* |\
 	cmcc,a10* |\
-	newland,nl-wr8103 |\
 	xiaomi,mi-router-wr30u* |\
 	xiaomi,mi-router-ax3000t* |\
 	*rax3000m* |\
@@ -764,6 +762,7 @@ setup_model()
 	h3c,nx30pro |\
 	konka,komi-a31 |\
 	*nokia,ea0326gmp* |\
+	newland,nl-wr8103 |\
 	nradio,wt9103 |\
  	Airpi* |\
 	*7981*)
