@@ -757,7 +757,6 @@ setup_model()
 	*clt,r30b1* |\
 	cmcc,a10* |\
 	newland,nl-wr8103 |\
-	umi,uax3000e|\
 	xiaomi,mi-router-wr30u* |\
 	xiaomi,mi-router-ax3000t* |\
 	*rax3000m* |\
