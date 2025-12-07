@@ -221,6 +221,11 @@ mediatek_setup_macs()
 		lan_mac=$(mtd_get_mac_ascii u-boot-env mac)
 		label_mac=$lan_mac
 		;;
+	newland,nl-wr8103)
+	        label_mac=$(mtd_get_mac_binary Factory 0x04)
+		lan_mac=$(macaddr_add $label_mac -1)
+		wan_mac=$(macaddr_add $label_mac -2)
+		;;
 	qihoo,360t7)
 		lan_mac=$(mtd_get_mac_ascii factory lanMac)
 		wan_mac=$(macaddr_add "$lan_mac" 1)
