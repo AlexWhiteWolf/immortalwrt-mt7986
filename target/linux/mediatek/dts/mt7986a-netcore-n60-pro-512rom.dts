@@ -21,7 +21,7 @@
 	};
 
 	chosen {
-		stdout-path = "serial0:115200n8";
+		bootargs = "console=ttyS0,115200n8 earlycon=uart8250,mmio32,0x11002000";
 	};
 
 	memory@40000000 {
@@ -239,10 +239,10 @@
 		spi-max-frequency = <20000000>;
 		spi-tx-bus-width = <4>;
 		spi-rx-bus-width = <4>;
-		
+
 		mediatek,nmbm;
-        	mediatek,bmt-max-ratio = <1>;
-        	mediatek,bmt-max-reserved-blocks = <64>;
+		mediatek,bmt-max-ratio = <1>;
+		mediatek,bmt-max-reserved-blocks = <64>;
 
 		partitions {
 			compatible = "fixed-partitions";
@@ -250,7 +250,7 @@
 			#size-cells = <1>;
 
 			partition@0 {
-				label = "bl2";
+				label = "BL2";
 				reg = <0x0 0x100000>;
 				read-only;
 			};
@@ -261,8 +261,9 @@
 			};
 
 			partition@180000 {
-				label = "factory";
+				label = "Factory";
 				reg = <0x180000 0x200000>;
+				read-only;
 
 				nvmem-layout {
 					compatible = "fixed-layout";
@@ -288,7 +289,7 @@
 			};
 
 			partition@380000 {
-				label = "fip";
+				label = "FIP";
 				reg = <0x380000 0x200000>;
 				read-only;
 			};
