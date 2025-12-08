@@ -8,7 +8,7 @@
 #include "mt7981.dtsi"
 
 / {
-	model = "UMI UAX3000E eMMC";
+	model = "UMI UAX3000E eMMC version";
 	compatible = "umi,uax3000e", "mediatek,mt7981";
 
 	chosen: chosen {
