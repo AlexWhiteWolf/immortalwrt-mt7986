@@ -73,6 +73,7 @@ platform_do_upgrade() {
     tplink,tl-xdr6088|\
 	xiaomi,redmi-router-ax6000|\
 	xiaomi,redmi-router-ax6000-512rom|\
+	xiaomi,redmi-router-ax6000-ubootmod|\
 	xiaomi,mi-router-ax3000t-ubootmod|\
     xiaomi,mi-router-wr30u-ubootmod|\
 	cetron,ct3003-ubootmod|\
