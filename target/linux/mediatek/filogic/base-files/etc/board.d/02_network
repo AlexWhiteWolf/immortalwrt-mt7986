@@ -165,8 +165,8 @@ mediatek_setup_interfaces()
 	xiaomi,mi-router-ax3000t-ubootmod|\
 	xiaomi,mi-router-wr30u-stock|\
 	xiaomi,mi-router-wr30u-ubootmod|\
-	xiaomi,redmi-router-ax6000-stock|\
-	xiaomi,redmi-router-ax6000-ubootmod-512rom|\
+	xiaomi,redmi-router-ax6000|\
+	xiaomi,redmi-router-ax6000-512rom|\
 	xiaomi,redmi-router-ax6000-ubootmod)
 		ucidef_set_interfaces_lan_wan "lan2 lan3 lan4" wan
 		;;
@@ -259,8 +259,8 @@ mediatek_setup_macs()
 	xiaomi,mi-router-ax3000t-ubootmod|\
 	xiaomi,mi-router-wr30u-stock|\
 	xiaomi,mi-router-wr30u-ubootmod|\
-	xiaomi,redmi-router-ax6000-stock
-	xiaomi,redmi-router-ax6000-ubootmod-512rom|\
+	xiaomi,redmi-router-ax6000|\
+	xiaomi,redmi-router-ax6000-512rom|\
 	xiaomi,redmi-router-ax6000-ubootmod)
 		wan_mac=$(mtd_get_mac_ascii Bdata ethaddr_wan)
 		label_mac=$wan_mac
@@ -294,7 +294,7 @@ mediatek_setup_macs()
         wifi_mac=$(macaddr_add $(cat /sys/class/net/eth0/address) 4)
         sed -i '/MacAddress=$wifi_mac/d' /etc/wireless/mediatek/mt7981.dbdc.b1.dat
         echo "MacAddress=$wifi_mac" >> /etc/wireless/mediatek/mt7981.dbdc.b1.dat
-	sed -i '/MacAddress=$wifi_mac/d' /etc/wireless/mediatek/mt7986-ax60000.dbdc.b0.dat
+	sed -i '/MacAddress=$wifi_mac/d' /etc/wireless/mediatek/mt7986-ax6000.dbdc.b0.dat
         echo "MacAddress=$wifi_mac" >> /etc/wireless/mediatek/mt7986-ax6000.dbdc.b0.dat
 	wifi_mac="$(macaddr_add $wifi_mac 1)"
         sed -i '/MacAddress=$wifi_mac/d' /etc/wireless/mediatek/mt7986-ax6000.dbdc.b1.dat

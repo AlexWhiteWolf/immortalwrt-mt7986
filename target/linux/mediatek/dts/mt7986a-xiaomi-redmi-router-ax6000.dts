@@ -9,27 +9,26 @@
 };
 
 &spi_nand_flash {
-        mediatek,nmbm;
-        mediatek,bmt-max-ratio = <1>;
-        mediatek,bmt-max-reserved-blocks = <64>;
+	mediatek,nmbm;
+	mediatek,bmt-max-ratio = <1>;
+	mediatek,bmt-max-reserved-blocks = <64>;
 };
 
 &partitions {
 	partition@580000 {
-                label = "crash";
-                reg = <0x580000 0x40000>;
-                read-only;
-        };
+		label = "crash";
+		reg = <0x580000 0x40000>;
+		read-only;
+	};
 
-        partition@5c0000 {
-                label = "crash_log";
-                reg = <0x5c0000 0x40000>;
-                read-only;
-        };
+	partition@5c0000 {
+		label = "crash_log";
+		reg = <0x5c0000 0x40000>;
+		read-only;
+	};
 
 	partition@600000 {
 		label = "ubi";
 		reg = <0x600000 0x6e00000>;
 	};
-
 };
