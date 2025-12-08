@@ -71,8 +71,8 @@ platform_do_upgrade() {
 	tplink,tl-xdr4288|\
     tplink,tl-xdr6086|\
     tplink,tl-xdr6088|\
-	xiaomi,redmi-router-ax6000-ubootmod-512rom|\
-	xiaomi,redmi-router-ax6000-ubootmod|\
+	xiaomi,redmi-router-ax6000|\
+	xiaomi,redmi-router-ax6000-512rom|\
 	xiaomi,mi-router-ax3000t-ubootmod|\
     xiaomi,mi-router-wr30u-ubootmod|\
 	cetron,ct3003-ubootmod|\
@@ -188,8 +188,7 @@ platform_do_upgrade() {
 		esac
 		;;
 	xiaomi,mi-router-ax3000t|\
-	xiaomi,mi-router-wr30u-stock|\
-	xiaomi,redmi-router-ax6000-stock)
+	xiaomi,mi-router-wr30u-stock)
 		CI_KERN_UBIPART=ubi_kernel
 		CI_ROOT_UBIPART=ubi
 		nand_do_upgrade "$1"
@@ -283,8 +282,7 @@ platform_pre_upgrade() {
 		asus_initial_setup
 		;;
 	xiaomi,mi-router-ax3000t|\
-	xiaomi,mi-router-wr30u-stock|\
-	xiaomi,redmi-router-ax6000-stock)
+	xiaomi,mi-router-wr30u-stock)
 		xiaomi_initial_setup
 		;;
 	esac
