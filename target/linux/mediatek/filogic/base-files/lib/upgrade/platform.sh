@@ -126,6 +126,7 @@ platform_do_upgrade() {
 	*Airpi*|\
 	cmcc,rax3000m-emmc|\
 	philips,hy3000|\
+	sl,3000|\
 	sl,3000-emmc|\
 	smartrg,sdg-8612|\
 	smartrg,sdg-8614|\
@@ -246,6 +247,7 @@ platform_copy_config() {
 	cmcc,rax3000m-emmc|\
 	philips,hy3000|\
 	jdcloud,re-cp-03|\
+    sl,3000|\
 	sl,3000-emmc|\
 	smartrg,sdg-8612|\
 	smartrg,sdg-8614|\
