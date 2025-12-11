@@ -1109,6 +1109,26 @@ define Device/huasifei_wh3000-emmc
 endef
 TARGET_DEVICES += huasifei_wh3000-emmc
 
+define Device/ikuai_q6000
+  DEVICE_VENDOR := iKuai
+  DEVICE_MODEL := Q6000
+  DEVICE_DTS := mt7986a-ikuai-q6000
+  DEVICE_DTS_DIR := ../dts
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7986-firmware mt7986-wo-firmware kmod-mtd-rw
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += ikuai_q6000
+ 
+ define Device/ikuai_q6000-emmc
+   DEVICE_VENDOR := iKuai
+   DEVICE_MODEL := Q6000 eMMC
+   DEVICE_DTS := mt7986a-ikuai-q6000-emmc
+   DEVICE_DTS_DIR := ../dts
+   DEVICE_PACKAGES := kmod-mt7915e kmod-mt7986-firmware mt7986-wo-firmware kmod-mmc
+   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+ endef
+ TARGET_DEVICES += ikuai_q6000-emmc
+
 define Device/imou_lc-hx3001
   DEVICE_VENDOR := Imou
   DEVICE_MODEL := LC-HX3001
