@@ -97,6 +97,7 @@ platform_do_upgrade() {
 	cudy,tr3000-v1-ubootmod|\
 	gatonetworks,gdsp|\
 	imou,lc-hx3001|\
+	ikuai,q6000|\
 	konka,komi-a31|\
 	livinet,zr-3020-ubootmod|\
 	mediatek,7981r128|\
@@ -244,6 +245,7 @@ platform_copy_config() {
 	glinet,gl-x3000|\
 	glinet,gl-xe3000|\
 	huasifei,wh3000-emmc|\
+	ikuai,q6000-emmc|\
 	cmcc,rax3000m-emmc|\
 	philips,hy3000|\
 	jdcloud,re-cp-03|\
